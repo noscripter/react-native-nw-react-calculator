@@ -24,7 +24,9 @@
   "main": "index.nw.html",
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "window": {
     "toolbar": true,
@@ -54,9 +56,10 @@
     "object-assign": "^4.0.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-native": "^0.13.2",
+    "react-native": "^0.39.1",
     "react-router": "^1.0.0-rc4",
-    "uniqid": "^1.0.0"
+    "uniqid": "^1.0.0",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel": "^5.8.29",
@@ -95,5 +98,6 @@
     "url-loader": "~0.5.6",
     "webpack": "~1.12.2",
     "webpack-dev-server": "~1.12.1"
-  }
+  },
+  "snyk": true
 }
